@@ -1,0 +1,29 @@
+<span class="user"><%= link_to taskable.user.name, taskable %></span><br/>
+<table>
+    <tr>	
+    	<th>Child Title</th>
+      <th>Checkbox</th>
+    </tr>
+
+    <tr>
+      <td><%= taskable.title %></td>
+      <td> <%= form_for taskable, remote: true do |f| %>
+        <%= f.check_box :completed, :class => "chil-task-check" %>
+      <% end %>
+    </tr>
+</table>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(taskable.created_at) %> ago.
+    <% if user_signed_in? %>
+    <%= link_to "delete", taskable, method: :delete,
+                                     data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+
+<script>
+  $.completeTask();
+</script>
+
+
+ 
+  

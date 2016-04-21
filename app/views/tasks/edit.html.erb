@@ -1,0 +1,19 @@
+<h2>Update task</h2>
+<%= form_for @task do |f| %>
+
+<p><%= f.label :title %>
+	<%= f.text_area :title %>
+</p>
+
+<p><%= f.label :note %>
+<%= f.text_area :note %>
+</p>
+
+<p><%= f.label :completion_date %>
+	<%= f.date_field :completion_date %>
+</p>
+
+<p>
+	<%= f.submit "Update task", class: "btn btn-lg btn-primary" %>
+</p>
+<% end %>

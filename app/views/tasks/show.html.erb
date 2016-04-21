@@ -1,0 +1,11 @@
+  <table>
+	 <tr>	
+	  	<th>Parent task Title</th>
+	 </tr>
+	 <tr>
+	  <td><%= @task.title %></td>
+	</tr>
+</table>
+<%= render partial: 'tasks/task', collection: @task.tasks, as: :taskable %>
+<%= render partial: 'tasks/form', locals: {taskable: @task} %>
+

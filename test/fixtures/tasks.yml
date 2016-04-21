@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  title: MyString
+  note: MyText
+  completed: 2016-04-19
+  taskable_id: 
+  taskable_type: Taskable
+
+two:
+  user_id: 
+  title: MyString
+  note: MyText
+  completed: 2016-04-19
+  taskable_id: 
+  taskable_type: Taskable

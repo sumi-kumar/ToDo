@@ -1,0 +1,15 @@
+<div class="row">
+  <aside class="col-md-4">
+    <section>
+      <h1>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+      <h3>tasks (<%= @tasks.count %>)</h3>
+      <ol class="tasks">
+        <%= render partial: 'tasks/task', collection: @tasks, as: :taskable %>
+      </ol>
+  </div>
+</div>
